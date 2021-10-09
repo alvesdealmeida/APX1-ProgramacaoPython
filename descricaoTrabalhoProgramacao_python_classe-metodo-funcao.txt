@@ -1,0 +1,29 @@
+Descrição do Trabalho de Programação em Python
+
+O código 1, embora funcione, poderia estar bem melhor escrito. Nessa AP1, 
+você irá reescrevê-lo de modo a torná-lo mais limpo, elegante e fácil de manter. 
+Basicamente, ele fornece duas classes para gerenciar pagamento de folgas de um 
+dia para os empregados de uma companhia. Os empregados podem receber por hora 
+ou mensalmente, e assumir as funções de presidente, gerentes, vice-presidentes, 
+estagiários, etc.
+Sua tarefa é rescrever o código 1, seguindo as oito recomendações abaixo:
+
+1. Crie uma classe Role derivada de Enum, para que o tipo de empregado não 
+possa ser uma string qualquer, mas assuma apenas valores válidos de um tipo enumerável.
+2. Elimine a duplicação de código nos métodos find managers, find vice presidente e find interns, 
+substituindo-os por um único método, que receba o tipo de empregado e retone uma lista: 
+find employee(self, role: Role) ? List[Employee].
+3. Use funções diponíveis em python (built in), 
+como list comprehensions, onde for possível (por exemplo), 
+no método fin employee que busca um empregado), para tornar o código mais claro e robusto.
+4. Use nomes de variáveis apropriados, por exemplo, no lugar de amount, 
+que é um identificador muito vago e não significa muita coisa.
+5. Elimine nomes de isinstance(), removendo o método pay employee e adicionando 
+um método abstrato pay(self) ? Nome da classe Employee (use o decorador @abstractmethod3). 
+Desse modo, toda subclasse de Employee (HourlyEmployee e SalariedEmployee) será obrigada 
+a implementar o seu próprio método pay.
+6. Elimine o parâmetro payout do método take a holiday e creie um novo método payout_a_holidy(self) ? None.
+7. Uma exceção vazia e inúti l(pass). Ou ela é tratada ou deve ser removida.
+8. Não use exceções genéricas como ValueError. Crie suas próprias  classes de exceção. 
+Não esqueça de alterar a função main() e enviar o novo código fonte employee2.py, 
+pois seu novo programa deve poder ser executado por nós.
